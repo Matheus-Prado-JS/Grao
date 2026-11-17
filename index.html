@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#2e3920" name="theme-color"/>
+  <meta content="Grão — Café &amp; Encontros. Cafés especiais, comida afetiva e tempo para ficar." name="description"/>
+  <title>
+   Grão — Café &amp; Encontros
+  </title>
+  <link href="https://images.unsplash.com" rel="preconnect"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <a aria-label="Grão início" class="brand" href="#inicio">
+    <img alt="Grão Cafeteria" height="685" src="grao-logo.png" width="2048"/>
+   </a>
+   <nav aria-label="Principal">
+    <a href="#sobre">
+     Nossa essência
+    </a>
+    <a href="#cardapio">
+     Cardápio
+    </a>
+    <a href="#contato">
+     Encontre o Grão
+    </a>
+   </nav>
+   <button aria-label="Abrir sacola" class="bag" id="openCart">
+    Sacola
+    <span id="count">
+     0
+    </span>
+   </button>
+  </header>
+  <main>
+   <section class="hero" id="inicio">
+    <div class="hero-copy">
+     <p class="eyebrow">
+      <span class="dot">
+      </span>
+      CAFÉ BOM. TEMPO BEM VIVIDO.
+     </p>
+     <h1>
+      Uma pausa.
+      <br/>
+      Um café.
+      <br/>
+      <em>
+       Um encontro.
+      </em>
+     </h1>
+     <p class="intro">
+      Entre o primeiro gole e a última conversa,
+      <br/>
+      existe um lugar para chamar de seu.
+     </p>
+     <a class="button" href="#cardapio">
+      Explore o cardápio
+      <span>
+       ↗
+      </span>
+     </a>
+     <div class="hero-bottom">
+      <span>
+       CAFÉS ESPECIAIS · FEITO COM CALMA
+      </span>
+      <a aria-label="Conheça nossa essência" href="#sobre">
+       ↓
+      </a>
+     </div>
+    </div>
+    <div class="hero-photo">
+     <img alt="Xícara de café artesanal sobre uma mesa de madeira" fetchpriority="high" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"/>
+     <div class="photo-label">
+      O seu dia pede
+      <br/>
+      <i>
+       um pouco de Grão.
+      </i>
+     </div>
+     <div class="stamp">
+      TORRA FRESCA
+      <br/>
+      <b>
+       ✳
+      </b>
+      <br/>
+      ALMA BRASILEIRA
+     </div>
+    </div>
+   </section>
+   <div class="ribbon">
+    <span>
+     DA ORIGEM À XÍCARA
+    </span>
+    ✳
+    <span>
+     CAFÉ COM PROPÓSITO
+    </span>
+    ✳
+    <span>
+     CONVERSAS SEM PRESSA
+    </span>
+    ✳
+    <span>
+     DA ORIGEM À XÍCARA
+    </span>
+   </div>
+   <section class="about section" id="sobre">
+    <div class="about-image reveal">
+     <img alt="Interior acolhedor de uma cafeteria" loading="lazy" src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"/>
+     <span>
+      Fique mais um pouquinho.
+     </span>
+    </div>
+    <div class="about-copy reveal">
+     <h2>
+      O melhor ingrediente
+      <br/>
+      é estar
+      <em>
+       presente.
+      </em>
+     </h2>
+     <p>
+      O Grão nasceu de uma ideia simples: dias comuns também merecem momentos especiais. Um café bem tirado, um pão quentinho e uma mesa que acolhe.
+     </p>
+     <p>
+      Escolhemos grãos brasileiros, respeitamos cada preparo e acreditamos que bons encontros não precisam de ocasião.
+     </p>
+     <div class="values">
+      <div>
+       ✳
+       <h3>
+        Daqui, de perto
+       </h3>
+       <p>
+        Grãos brasileiros e sabores que abraçam.
+       </p>
+      </div>
+      <div>
+       ◌
+       <h3>
+        No seu tempo
+       </h3>
+       <p>
+        Um convite para desacelerar e ficar.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="menu section" id="cardapio">
+    <div class="section-head reveal">
+     <div>
+      <h2>
+       Feito com afeto.
+       <br/>
+       <em>
+        Servido com calma.
+       </em>
+      </h2>
+     </div>
+     <p>
+      Do espresso de todo dia ao doce
+      <br/>
+      que faz você esquecer a hora.
+     </p>
+    </div>
+    <div class="menu-tools">
+     <div aria-label="Categorias" class="tabs" role="group">
+      <button class="active" data-cat="Todos">
+       Todos
+      </button>
+      <button data-cat="Cafés">
+       Cafés
+      </button>
+      <button data-cat="Gelados">
+       Gelados
+      </button>
+      <button data-cat="Da cozinha">
+       Da cozinha
+      </button>
+      <button data-cat="Doces">
+       Doces
+      </button>
+     </div>
+     <label class="vegan">
+      <input id="vegan" type="checkbox"/>
+      Só opções vegetais
+      <span>
+       ♧
+      </span>
+     </label>
+    </div>
+    <label class="search-label" for="search">
+     Pesquise sua próxima pausa
+     <input autocomplete="off" id="search" placeholder="Busque por café, chocolate, croissant…" type="search"/>
+    </label>
+    <p class="menu-note" id="results" role="status">
+    </p>
+    <div class="products" id="products">
+    </div>
+    <p class="menu-note">
+     ♧ Opção vegetal disponível · Imagens ilustrativas · Cardápio fictício
+    </p>
+   </section>
+   <section class="feature">
+    <img alt="Café sendo preparado artesanalmente" loading="lazy" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=1800&amp;q=85"/>
+    <div class="feature-copy reveal">
+     <p class="eyebrow">
+      O RITUAL DA CASA
+     </p>
+     <h2>
+      Pequenos rituais.
+      <br/>
+      <em>
+       Grandes momentos.
+      </em>
+     </h2>
+     <p>
+      Moer na hora. Sentir o aroma. Esperar o tempo certo.
+      <br/>
+      É assim que a gente transforma café em cuidado.
+     </p>
+     <a class="button light" href="#cardapio">
+      Encontre seu favorito ↗
+     </a>
+    </div>
+   </section>
+   <section aria-labelledby="reviews-title" class="section reviews">
+    <p class="eyebrow">
+     ENCONTROS QUE INSPIRAM
+    </p>
+    <h2 id="reviews-title">
+     Boas pausas,
+     <em>
+      boas histórias.
+     </em>
+    </h2>
+    <p>
+     Avaliações fictícias, criadas para demonstrar este projeto de portfólio.
+    </p>
+    <div class="review-grid">
+     <article>
+      <span aria-label="5 de 5 estrelas">
+       ★★★★★
+      </span>
+      <blockquote>
+       O cappuccino com leite vegetal virou minha pausa favorita. Um lugar para ficar sem olhar o relógio.
+      </blockquote>
+      <strong>
+       Marina A.
+      </strong>
+      <small>
+       Avaliação fictícia
+      </small>
+     </article>
+     <article>
+      <span aria-label="5 de 5 estrelas">
+       ★★★★★
+      </span>
+      <blockquote>
+       Café equilibrado e croissant quentinho. A combinação perfeita para começar o dia.
+      </blockquote>
+      <strong>
+       Rafael M.
+      </strong>
+      <small>
+       Avaliação fictícia
+      </small>
+     </article>
+     <article>
+      <span aria-label="5 de 5 estrelas">
+       ★★★★★
+      </span>
+      <blockquote>
+       Adorei o cold brew e o cuidado em cada detalhe. Já quero voltar para experimentar os doces.
+      </blockquote>
+      <strong>
+       Júlia C.
+      </strong>
+      <small>
+       Avaliação fictícia
+      </small>
+     </article>
+    </div>
+   </section>
+   <section class="visit section" id="contato">
+    <div class="reveal">
+     <h2>
+      Sua próxima pausa
+      <br/>
+      tem
+      <em>
+       endereço.
+      </em>
+     </h2>
+     <p>
+      Puxe uma cadeira. O café está quase pronto.
+     </p>
+     <div class="visit-details">
+      <div>
+       <h3>
+        Onde estamos
+       </h3>
+       <p>
+        Rua dos Encontros, 128 · Vila Madalena
+        <br/>
+        São Paulo — SP
+       </p>
+      </div>
+      <div>
+       <h3>
+        De portas abertas
+       </h3>
+       <p>
+        Segunda a sexta · 8h às 19h
+        <br/>
+        Sábados e domingos · 9h às 18h
+       </p>
+      </div>
+      <div>
+       <h3>
+        Vamos conversar?
+       </h3>
+       <a href="mailto:oi@grao.example">
+        oi@grao.example ↗
+       </a>
+      </div>
+     </div>
+     <small>
+      Projeto de portfólio: cafeteria, endereço e contato fictícios.
+     </small>
+    </div>
+    <div class="contact-card reveal">
+     <span class="big-star">
+      ✳
+     </span>
+     <h3>
+      Tem lugar para
+      <br/>
+      mais um encontro.
+     </h3>
+     <p>
+      Uma conversa, um livro ou só você.
+      <br/>
+      Todos os jeitos de ficar são bem-vindos.
+     </p>
+     <a class="button" href="#cardapio">
+      Monte sua pausa ↗
+     </a>
+     <span class="card-mark">
+      GRÃO · CAFÉ &amp; ENCONTROS
+     </span>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <a class="brand" href="#inicio">
+    <img alt="Grão Cafeteria" height="685" src="grao-logo.png" width="2048"/>
+   </a>
+   <p>
+    Café bom. Conversa boa. O resto pode esperar.
+   </p>
+   <a href="#inicio">
+    Voltar ao topo ↑
+   </a>
+   <div class="copyright">
+    © 2026 Grão — Café &amp; Encontros
+    <span>
+     Feito para encontros. Projeto demonstrativo.
+    </span>
+   </div>
+  </footer>
+  <dialog id="cart">
+   <div class="cart-head">
+    <div>
+     <p class="eyebrow">
+      SUA PAUSA, DO SEU JEITO
+     </p>
+     <h2>
+      Sua sacola
+      <em>
+       Grão.
+      </em>
+     </h2>
+    </div>
+    <button aria-label="Fechar sacola" class="icon" id="closeCart">
+     ×
+    </button>
+   </div>
+   <div id="cartItems">
+   </div>
+   <div class="cart-bottom">
+    <label class="field">
+     Como prefere receber?
+     <select id="delivery">
+      <option value="pickup">
+       Retirar na cafeteria · grátis
+      </option>
+      <option value="near">
+       Entrega próxima · R$ 6,00
+      </option>
+      <option value="far">
+       Entrega ampliada · R$ 10,00
+      </option>
+     </select>
+    </label>
+    <p>
+     Entrega fictícia: escolha uma região apenas para simular o valor.
+    </p>
+    <div class="total">
+     Subtotal
+     <strong id="subtotal">
+     </strong>
+    </div>
+    <div class="total">
+     Entrega fictícia
+     <strong id="shipping">
+     </strong>
+    </div>
+    <div class="total grand">
+     Total
+     <strong id="total">
+     </strong>
+    </div>
+    <p>
+     Pedido demonstrativo. Nenhuma cobrança será feita.
+    </p>
+    <button class="button" id="checkout">
+     Ir para checkout ↗
+    </button>
+   </div>
+  </dialog>
+  <dialog aria-labelledby="customTitle" class="center-dialog" id="customize">
+   <form id="customForm">
+    <div class="cart-head">
+     <h2 id="customTitle">
+     </h2>
+     <button aria-label="Fechar personalização" class="icon" data-close="customize" type="button">
+      ×
+     </button>
+    </div>
+    <div id="options">
+    </div>
+    <button class="button" id="customAdd" type="submit">
+    </button>
+   </form>
+  </dialog>
+  <dialog aria-labelledby="checkoutTitle" class="center-dialog" id="checkoutDialog">
+   <div class="cart-head">
+    <h2 id="checkoutTitle">
+     Finalizar
+     <em>
+      sua pausa.
+     </em>
+    </h2>
+    <button aria-label="Fechar checkout" class="icon" data-close="checkoutDialog">
+     ×
+    </button>
+   </div>
+   <div id="checkoutContent">
+   </div>
+  </dialog>
+  <div aria-live="polite" id="toast" role="status">
+  </div>
+  <script src="app.js">
+  </script>
+ </body>
+</html>
